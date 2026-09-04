@@ -3,8 +3,8 @@ import { useCallback, useRef, useState } from "react";
 import { removeBackground } from "@imgly/background-removal";
 import { ArrowDownToLine, Check, FileImage, ImagePlus, Loader2, LockKeyhole, RotateCcw, ScanLine, ShieldCheck, Sparkles, UploadCloud, X } from "lucide-react";
 
-const HERO_IMAGE = "/manus-storage/hd-cutout-hero-collage_747d051e.png";
-const LOGO = "/manus-storage/hd-cutout-logo_be47ee8d.png";
+const LOGO = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='10' y='10' width='42' height='42' fill='%23f4f2ec' stroke='%23151515' stroke-width='4'/%3E%3Cpath d='M10 24h12v12' fill='none' stroke='%23151515' stroke-width='4'/%3E%3Cpath d='M42 10h10v10' fill='none' stroke='%23151515' stroke-width='4'/%3E%3Cpath d='M42 10l10 10H42z' fill='%23d7f94b'/%3E%3C/svg%3E";
+const HERO_IMAGE = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 500'%3E%3Crect width='700' height='500' fill='%23e5e2d8'/%3E%3Ccircle cx='190' cy='190' r='72' fill='%232f53a4'/%3E%3Cpath d='M130 170 Q190 90 250 170 L235 290 Q190 330 145 290z' fill='%232f53a4'/%3E%3Ccircle cx='505' cy='185' r='60' fill='%23ee4d56'/%3E%3Cpath d='M465 245 Q505 210 545 245 L555 310 Q505 350 455 310z' fill='%23ee4d56'/%3E%3Cpath d='M140 380l115-60 64 45-115 60z' fill='%23d7a417'/%3E%3Cpath d='M430 360q45-90 90 0q-45-32-90 0M450 330q-6-75 22-105M478 330q38-63 52-66M470 350q-60-42-92-17' fill='none' stroke='%234f7b3b' stroke-width='14' stroke-linecap='round'/%3E%3C/svg%3E";
 
 type Status = "idle" | "ready" | "processing" | "done" | "error";
 
