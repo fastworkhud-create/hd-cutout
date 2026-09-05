@@ -58,7 +58,7 @@ export default function Home() {
           <div className="panel-head"><div><span className="panel-kicker">CUTOUT / 001</span><h2>Drop an image.<br /><span>Keep the details.</span></h2></div><div className="format-chip"><FileImage size={15} /> PNG / TRANSPARENT</div></div>
 
           {!file && <div className={`dropzone ${dragging ? "is-dragging" : ""}`} onDragOver={(e) => { e.preventDefault(); setDragging(true); }} onDragLeave={() => setDragging(false)} onDrop={(e) => { e.preventDefault(); setDragging(false); const f = e.dataTransfer.files[0]; if (f) acceptFile(f); }} onClick={() => inputRef.current?.click()} role="button" tabIndex={0} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") inputRef.current?.click(); }}>
-            <input ref={inputRef} type="file" accept="image/png,image/jpeg,image/webp" hidden onChange={(e) => e.target.files?.[0] && acceptFile(e.target.files[0])} />
+            <input ref={inputRef} className="file-input" type="file" accept="image/png,image/jpeg,image/webp" onChange={(e) => e.target.files?.[0] && acceptFile(e.target.files[0])} />
             <div className="upload-icon"><UploadCloud size={28} strokeWidth={1.5} /></div><strong>Drop your image here</strong><span>or click to browse from your device</span><small>JPG, PNG, WEBP <i>·</i> MAX 25 MB</small>
           </div>}
 
